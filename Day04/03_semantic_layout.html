@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 요소 - 레이아웃</title>
+     <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+     <style>
+         * { box-sizing: border-box; margin: 0; padding: 0; }
+
+         body {
+            font-family: 'Noto Sans KR', sans-serif;
+         }
+
+         header {
+             background-color: lightgray;
+             height: 100px;
+             line-height: 100px;
+             text-align: center;
+             font-size: 20px;
+         }
+
+         nav {
+             float: left;
+             width: 20%;
+             height: 300px;
+             background-color: #339999;
+             padding: 20px;
+         }
+
+         article {
+             float: left;
+             padding: 20px;
+             width: 80%;
+             background-color: #f1f1f1;
+             height: 300px;
+         }
+
+         section::after {
+             content: '';
+             display: block;
+             clear: both;
+         }
+
+         footer {
+             background-color: #ffcc00;
+             height: 100px;
+             line-height: 100px;
+             text-align: center;
+         }
+
+         /* 반응형 적용 - 가로 사이즈 600px 이하 */
+         @media screen and (max-width: 600px) {
+             nav,
+             article {
+                 width: 100%;
+                 height: auto;
+             }
+             
+         }
+     </style>
+</head>
+<body>
+    <h1>semantic 태그를 이용한 레이아웃</h1>
+    <header>
+        <h2>HEADER</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <!-- 한 줄 복사 : alt + shift + ↓ -->
+                <li><a href="#">manu 001</a></li>
+                <li><a href="#">manu 002</a></li>
+                <li><a href="#">manu 003</a></li>
+                <li><a href="#">manu 004</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>SBS 아카데미</h1>
+            <p>
+                계절이 별 어머니 추억과 당신은 까닭입니다. 별에도 가난한 때 동경과 둘 불러 까닭입니다.
+            </p>
+            <p>
+                계절이 별 어머니 추억과 당신은 까닭입니다. 별에도 가난한 때 동경과 둘 불러 까닭입니다.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+</body>
+</html>
